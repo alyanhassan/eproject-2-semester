@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+.admin-sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0f0c29 0%, #1a1040 60%, #0f0c29 100%);
+    position: fixed;
+    left: 0; top: 0;
+    padding: 20px 0 40px;
+    z-index: 100;
+    box-shadow: 4px 0 30px rgba(0,0,0,0.3);
+    border-right: 1px solid rgba(124,58,237,0.1);
+    overflow-y: auto;
+}
+.admin-sidebar .brand {
+    padding: 20px 24px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: 8px;
+}
+.admin-sidebar .sidebar-section {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #4b4b7a;
+    padding: 16px 24px 6px;
+}
+.admin-sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 24px;
+    color: #7b7baa;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all .2s;
+    border-left: 3px solid transparent;
+    font-family: 'Poppins', sans-serif;
+}
+.admin-sidebar a:hover, .admin-sidebar a.active {
+    color: #e2e8f0;
+    background: rgba(124,58,237,0.12);
+    border-left-color: #7c3aed;
+}
+.admin-sidebar a i { width: 18px; text-align: center; font-size: 0.85rem; }
+
+.admin-content { margin-left: 260px; min-height: 100vh; background: #f5f3ff; font-family: 'Poppins', sans-serif; }
+
+.admin-topbar {
+    background: #fff;
+    padding: 16px 28px;
+    border-bottom: 1px solid #f0eeff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(91,33,182,0.06);
+    position: sticky; top: 0; z-index: 50;
+}
+
+.admin-body { padding: 28px; }
+
+/* Charts */
+.chart-card { border-radius: 16px; border: none; box-shadow: 0 4px 20px rgba(91,33,182,0.08); }
+
+@media (max-width: 768px) {
+    .admin-sidebar { transform: translateX(-260px); }
+    .admin-content { margin-left: 0; }
+}

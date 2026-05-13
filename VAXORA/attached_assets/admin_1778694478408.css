@@ -1,0 +1,116 @@
+:root {
+    --primary: #0d6efd;
+    --success: #198754;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --info: #0dcaf0;
+    --dark: #1e1e2f;
+    --light: #f8f9fa;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #f4f6f9;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: linear-gradient(135deg, #0d6efd, #1e1e2f);
+    padding: 12px 20px;
+    color: white;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+}
+
+/* ================= CARDS ================= */
+.dashboard-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* ================= BUTTONS ================= */
+.btn-premium {
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+}
+
+.btn-premium:hover {
+    opacity: 0.9;
+    color: white;
+}
+
+/* ================= TABLE ================= */
+.table-premium {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-premium thead {
+    background: #0d6efd;
+    color: white;
+}
+
+.table-premium tbody tr:hover {
+    background: #f1f3f5;
+}
+
+/* ================= BADGES ================= */
+.badge {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* ================= SIDEBAR (if used later) ================= */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: var(--dark);
+    color: white;
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar a {
+    color: white;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.sidebar a:hover {
+    background: var(--primary);
+}
+
+/* ================= FORMS ================= */
+input, textarea, select {
+    border-radius: 8px !important;
+    padding: 8px !important;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.dashboard-card {
+    animation: fadeIn 0.4s ease-in-out;
+}
