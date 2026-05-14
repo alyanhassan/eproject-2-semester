@@ -1,0 +1,234 @@
+/* ================= IMPROVED GLOBAL STYLES ================= */
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+    --dark-color: #2e2f3e;
+    --light-bg: #f4f6f9;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--light-bg);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ================= HERO ================= */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 80px 20px;
+    color: white;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../images/pattern.png') repeat;
+    opacity: 0.08;
+}
+
+/* ================= FEATURE CARDS ================= */
+.feature-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* ================= DASHBOARD CARDS ================= */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0.15rem 1.75rem rgba(58,59,69,0.12);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card-header {
+    background: white;
+    border-bottom: 1px solid #e3e6f0;
+    font-weight: 600;
+}
+
+/* ================= BORDER LEFT CARDS ================= */
+.border-left-primary { border-left: 5px solid var(--primary-color) !important; }
+.border-left-success { border-left: 5px solid var(--success-color) !important; }
+.border-left-info { border-left: 5px solid var(--info-color) !important; }
+.border-left-warning { border-left: 5px solid var(--warning-color) !important; }
+.border-left-danger { border-left: 5px solid var(--danger-color) !important; }
+
+/* ================= TABLES ================= */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+.table thead th {
+    background: #f8f9fc;
+    color: #4e4e4e;
+    font-weight: 600;
+    border: none;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f4ff;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #2e59d9;
+}
+
+/* ================= BADGES ================= */
+.badge {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* ================= FORMS ================= */
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border: 1px solid #d1d3e2;
+    padding: 10px 14px;
+    transition: all 0.2s;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(78,115,223,0.2);
+}
+
+/* ================= NAVBAR ENHANCED ================= */
+.navbar {
+    background: linear-gradient(135deg, #4e73df, #2e2f3e);
+    padding: 12px 18px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* ================= TIMELINE ================= */
+.schedule-timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.timeline-badge {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.timeline-content {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+/* ================= ANIMATIONS ================= */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= LOADING ================= */
+.spinner-wrapper {
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 15px;
+        text-align: center;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .timeline-content {
+        margin-left: 0;
+    }
+}
+
+/* ================= PRINT ================= */
+@media print {
+    .navbar,
+    .btn,
+    .no-print {
+        display: none !important;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
